@@ -49,7 +49,7 @@ function transferProjectToRemote(failed, successful) {
 // creates a temporary folder on the remote server
 function createRemoteTempFolder() {
   return ssh.execCommand(
-    'rm -rf Starter-Node-Angular-temp && mkdir Starter-Node-Angular-temp', {
+    'rm -rf Starter-Node-Angular-temp && mkdir Starter-Node-Angular-temp && mkdir Starter-Node-Angular', {
       cwd: '/home/ubuntu'
   });
 }
