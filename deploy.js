@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'mkdir Starter-Node-Angular && cp -r Starter-Node-Angular-temp/* Starter-Node-Angular/ && rm -rf Starter-Node-Angular-temp', {
+    'echo test && cp -r Starter-Node-Angular-temp/* Starter-Node-Angular/ && rm -rf Starter-Node-Angular-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -121,7 +121,7 @@ function sshConnect() {
     })
     .then(function(status) {
       if (status) {
-        console.log('Updating remote app.');
+        console.log('Updating remote app. 1.. 2.. 3..');
         return updateRemoteApp();
       } else {
         return Promise.reject(failed.join(', '));
